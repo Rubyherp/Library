@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Library</title>
 </head>
 
 <body>
     <div class="container">
         <div class="header">
-            <p>Library</p>
+            <p>Xiang Neng's Library</p>
             <button type="button" class="post-form">Add Another Book</button>
         </div>
         <div class="form hidden" id="form-wrapper">
             <div id="form-content" class="form-content">
-                    <div class="controls">
+                    <div>
                         <button type="button" class="close-btn">X</button>
                     </div>
                 <form action="" class="form-details">
-                    <p>Enter details</p>
+                    <p class="form-header">Enter details</p>
                     <div class="get-title">
                         <label for="title"> Title: </label>
                         <input type="text" name="title" id="title" >
@@ -29,14 +29,17 @@
                         <label for="author"> Author: </label>
                         <input type="text" name="author" id="author" >
                     </div>
-                    <div class="get-staus">
+                    <div class="get-status">
                         <p> Status: </p>
                         <label for="status-1"> <input type="radio" name="status" value="1" id="status-1"> Unread
                         </label>
-                        <label for="status-2"> <input type="radio" name="status" value="1" id="status-2"> Reading
+                        <label for="status-2"> <input type="radio" name="status" value="2" id="status-2"> Reading
                         </label>
-                        <label for="status-3"> <input type="radio" name="status" value="1" id="status-3"> Finished
+                        <label for="status-3"> <input type="radio" name="status" value="3" id="status-3"> Finished
                         </label>
+                    </div>
+                    <div class="controls">
+                        <button type="button" class="submit-btn">Submit</button>
                     </div>
                 </form>
             </div>

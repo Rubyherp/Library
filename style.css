@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 @font-face {
@@ -12,7 +13,7 @@
     font-weight: normal;
     font-display: swap;
     font-style: normal;
-    }
+}
 
 @font-face {
     font-family: 'Rampart One';
@@ -36,18 +37,18 @@
     grid-area: "header";
     font-family: 'Rampart One';
     font-size: 3em;
-    text-decoration: wavy underline;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-.header > button {
+.header>button {
     background-color: black;
     color: white;
-    border-radius: 15px;
+    border: none;
+    border-radius: 20px;
     font-size: 0.3em;
-    padding: 10px;
+    padding: 5px 10px;
     cursor: pointer;
 }
 
@@ -61,10 +62,11 @@
 
 .card {
     display: grid;
-    justify-content: center;
+    grid-template-rows: 3fr 2fr 1fr 0.5fr;
+    grid-template-areas: "title" "author" "status" "remove-btn";
     align-items: center;
     padding-top: 10px;
-    min-height: 10em;
+    min-height: 20em;
 
     background-color: brown;
     background-image: url("images/book-background.png");
@@ -72,16 +74,63 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    border: 1px solid red;
     border-radius: 15px;
+    border: 1px solid black;
 
     text-align: center;
     text-overflow: auto;
     font-size: clamp(1rem, 1.8vw, 2.5rem);
     font-family: 'Typewriter';
     color: white;
-    text-decoration: underline;
+    text-shadow: 2px 2px 2px black;
     font-weight: 900;
+}
+
+.card-title {
+    grid-area: title;
+    font-size: 2em;
+}
+
+.card-author {
+    grid-area: author;
+}
+
+.card-status {
+    grid-area: status;
+    &:hover {
+        background-color: white;
+    }
+}
+
+.card-remove {
+    grid-area: remove-btn;
+    align-self: end;
+    display: inline;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: transparent;
+    font-size: 10px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: red;
+        color: white;
+    }
+}
+.unread {
+    color: red;
+    text-shadow: 1px 1px 1px white;
+}
+
+.reading {
+    color: rgb(75, 75, 255);
+    text-shadow: 1px 1px 1px white;
+}
+
+.finished {
+    color: green;
+    text-shadow: 1px 1px 1px white;
 }
 
 .hidden {
@@ -106,11 +155,20 @@
     border-radius: 15px;
     min-width: 300px;
     position: relative;
+    gap: 10px;
+}
+
+.form-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .close-btn {
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 15px;
     background: none;
     border: none;
@@ -123,8 +181,53 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+        color: red;
+    }
 }
 
-.close-btn:hover {
-    color: #000;
+.form-details {
+    font-family: 'Typewriter';
+
+    & .form-header {
+        font-size: 2em;
+    }
+}
+
+.constrols {
+    justify-self: center;
+    align-self: center;
+}
+.submit-btn {
+    font-size: 1em;
+    border-radius: 15px;
+    border: none;
+    padding: 5px;
+
+    &:hover {
+        color: red;
+        text-shadow: 2px 2px 2px black;
+        transform: translate(2px 2px 2px);
+        border: 1px solid red;
+    }
+}
+
+label {
+    font-size: 25px;
+}
+
+input {
+    height: 25px;
+}
+
+input:hover {
+    border: 1px solid red;
+}
+
+.get-status {
+    & p {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
 }
