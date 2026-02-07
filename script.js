@@ -1,5 +1,22 @@
 
 const cardsContainer = document.querySelector(".cards");
+const formWrapper = document.querySelector("#form-wrapper")
+const addBookForm = document.querySelector(".post-form");
+const closeTab = document.querySelector(".close-btn");
+
+addBookForm.addEventListener("click", () => {
+    formWrapper.classList.remove("hidden"); // remove hidden to show
+});
+
+closeTab.addEventListener("click", () => {
+    formWrapper.classList.add("hidden"); // add hidden to hide
+});
+
+formWrapper.addEventListener("click", (e) => {
+    if (e.target === formWrapper) {
+        formWrapper.classList.add("hidden");
+    }
+});
 
 const myLibrary = [];
 
