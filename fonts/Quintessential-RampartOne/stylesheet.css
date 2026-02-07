@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Rampart One';
+    src: url('RampartOne-Regular.woff2') format('woff2'),
+        url('RampartOne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quintessential';
+    src: url('Quintessential-Regular.woff2') format('woff2'),
+        url('Quintessential-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

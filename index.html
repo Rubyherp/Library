@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <p>Library</p>
+            <button class="post-form">Add Another Book</button>
+        </div>
+        <div class="form">
+            <div class="form-content">
+
+                <form action="" class="form-details">
+
+                    <p>Enter details</p>
+
+                    <div class="get-title">
+
+                        <label for="title"> Title: </label>
+                        <input type="text" name="title" id="title" required>
+
+                    </div>
+
+                    <div class="get-author">
+
+                        <label for="author"> Author: </label>
+                        <input type="text" name="author" id="auth" required>
+
+                    </div>
+
+                    <div class="get-staus">
+
+                        <p> Status: </p>
+                        <label for="status-1"> <input type="radio" name="status" value="1" id="status-1"> Unread </label>
+                        <label for="status-2"> <input type="radio" name="status" value="1" id="status-2"> Reading </label>
+                        <label for="status-3"> <input type="radio" name="status" value="1" id="status-3"> Finished </label>
+                        
+                    </div>
+
+                    </label>
+                </form>
+
+            </div>
+        </div>
+        <div class="cards">
+            
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
