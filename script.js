@@ -141,7 +141,7 @@ function displayBook() {
 
 const book1 = new Book("Harry Potter", "JK Rowling", "3");
 const book2 = new Book("Xiang Neng's Magical Journey", "Xiang Neng", "2");
-const book3 = new Book("Xiang Neng's files!?", "FBI", "1");
+const book3 = new Book("Xiang Neng's Files !?", "FBI", "1");
 const book4 = new Book("Exploring XN's Island", "FBI", "1");
 
 addBookToLibrary(book1);
