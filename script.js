@@ -50,10 +50,28 @@ cardsContainer.addEventListener("click", (e) => {
 const myLibrary = [];
 
 class Book {
+  #title;
+  #author;
+  #status;
+
   constructor(title, author, status) {
-    this.title = title;
-    this.author = author;
-    this.status = status;
+    this.#title = title;
+    this.#author = author;
+    this.#status = status;
+  }
+
+  get title() {
+    return this.#title;
+  }
+  get author() {
+    return this.#author;
+  }
+  get status() {
+    return this.#status;
+  }
+
+  set status(value) {
+    this.#status = value;
   }
 }
 
